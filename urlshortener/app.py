@@ -20,9 +20,6 @@ def your_url():
 def about():
     return render_template('about.html')
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
-
 @app.route('/<string:code>')
 def redirect_to_url(code):
     if os.path.exists('urls.json'):
